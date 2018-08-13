@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org"
+                xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+</head>
+<body>
+<h2>It Works!</h2>
+<div sec:authorize="hasAuthority('ADMIN')">
+administratoe will see this text.
+</div>
+<div sec:authorize="hasAuthority('USER')">
+    User will see this text.
+</div>
+<p>
+    <a href="/logout"> LogOut</a>
+</p>
+</body>
+</html>
